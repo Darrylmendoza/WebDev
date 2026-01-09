@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Information System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>KLL Student Information</h1>
+
+    <div class="listview">
+        <div class="listview-header">
+            <div>ID</div>
+            <div>Name</div>
+            <div>Grade</div>
+            <div>Section</div>
+            <div>Address</div>
+            <div>Contact</div>
+        </div>
+        <div id="studentList" class="listview-body"></div>
+    </div>
+
+    <div id="studentForm">
+        <input id="name" placeholder="Name">
+        <input id="grade" type="number" placeholder="Grade">
+        <input id="section" placeholder="Section">
+        <input id="address" placeholder="Address">
+        <input id="contact" placeholder="Contact">
+        <select id="course">
+            <option value="">Select Course</option>
+            <option value="BSCS">BSCS</option>
+            <option value="ACT">ACT</option>
+        </select>
+        <button id="addStudentBtn">Add Student</button>
+
+        <input id="deleteId" placeholder="Student ID to Delete">
+        <button id="deleteStudentBtn">Delete Student</button>
+    </div>
+
+    <div id="addedIdMessage"></div>
+
+    <div class="course-lists">
+        <h2>BSCS Students</h2>
+        <div class="listview-small-header">
+            <div>Name</div>
+            <div>Grade</div>
+            <div>Section</div>
+        </div>
+        <div id="bscsList" class="listview-body-small"></div>
+
+        <h2>ACT Students</h2>
+        <div class="listview-small-header">
+            <div>Name</div>
+            <div>Grade</div>
+            <div>Section</div>
+        </div>
+        <div id="actList" class="listview-body-small"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

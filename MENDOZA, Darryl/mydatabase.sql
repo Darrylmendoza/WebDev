@@ -1,0 +1,43 @@
+CREATE DATABASE IF NOT EXISTS studentinfo;
+USE studentinfo;
+
+CREATE TABLE Students (
+    StudentNumber INT AUTO_INCREMENT PRIMARY KEY,
+    StudentID INT NOT NULL UNIQUE,
+    StudentName VARCHAR(200) NOT NULL,
+    StudentGrade INT NOT NULL,
+    StudentSection VARCHAR(50) NOT NULL,
+    StudentAddress VARCHAR(200) NOT NULL,
+    StudentContact VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE BSCS (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    StudentID INT NOT NULL,
+    FOREIGN KEY (StudentID) REFERENCES Students(StudentID) ON DELETE CASCADE
+);
+
+CREATE TABLE ACT (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    StudentID INT NOT NULL,
+    FOREIGN KEY (StudentID) REFERENCES Students(StudentID) ON DELETE CASCADE
+);
+
+DROP TABLE IF EXISTS BSCS;
+DROP TABLE IF EXISTS ACT;
+DELETE FROM Students;
+SET SQL_SAFE_UPDATES = 0;
+SET SQL_SAFE_UPDATES = 1;
+
+INSERT INTO Students (StudentID, StudentName, StudentGrade, StudentSection, StudentAddress, StudentContact)
+VALUES (1234567, 'Test Student', 10, 'A', '123 Street', '09123456789');
+
+INSERT INTO BSCS (StudentID) VALUES (1234567);
+
+
+SELECT * FROM Students;
+SELECT * FROM BSCS;
+
+SELECT * FROM ACT;
+
+

@@ -1,0 +1,182 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 30px;
+    background: #0f0f0f;
+    color: white;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #c62828;
+}
+
+h2 {
+    color: #d4af37;
+    margin-top: 40px;
+}
+
+.listview {
+    max-width: 1200px;
+    margin: 20px auto;
+    background: white;
+    color: black;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.listview-header {
+    display: grid;
+    grid-template-columns: 140px 1.5fr 100px 120px 2fr 160px;
+    background: #1b1b1b;
+    color: #d4af37;
+    font-weight: 600;
+    padding: 12px;
+}
+
+.listview-body {
+    max-height: 420px;
+    overflow-y: auto;
+}
+
+.listview-row {
+    display: grid;
+    grid-template-columns: 140px 1.5fr 100px 120px 2fr 160px;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    background: #f7f7f7;
+}
+
+    .listview-row:nth-child(even) {
+        background: #ededed;
+    }
+
+    .listview-row:hover {
+        background: #fff3cd;
+    }
+
+.course-lists {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.listview-small-header, .listview-row-small {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    padding: 8px;
+    font-weight: 600;
+    background: #1b1b1b;
+    color: #d4af37;
+    border-radius: 6px 6px 0 0;
+}
+
+.listview-body-small {
+    max-height: 200px;
+    overflow-y: auto;
+    background: #f7f7f7;
+    border-radius: 0 0 6px 6px;
+    margin-bottom: 20px;
+}
+
+.listview-row-small {
+    background: #ededed;
+    border-bottom: 1px solid #ccc;
+}
+
+    .listview:nth-child(even) {
+        background: #e0e0e0;
+    }
+
+    .listview:hover {
+        background: #fff3cd;
+    }
+
+#studentForm {
+    max-width: 1200px;
+    margin: 25px auto 0;
+    background: #1b1b1b;
+    padding: 20px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+    #studentForm input,
+    #studentForm select {
+        padding: 10px;
+        border-radius: 6px;
+        border: none;
+    }
+
+#addStudentBtn {
+    grid-column: span 3;
+    padding: 12px;
+    background: #c62828;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+    #addStudentBtn:hover {
+        background: #a81b1b;
+    }
+
+#deleteStudentBtn {
+    background: black;
+    color: #d4af37;
+    border: 2px solid #d4af37;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 12px;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+    #deleteStudentBtn:hover {
+        background: #d4af37;
+        color: black;
+        border-color: black;
+    }
+
+#addedIdMessage {
+    text-align: center;
+    margin-top: 15px;
+    color: #d4af37;
+    font-weight: 600;
+}
+
+@media (max-width: 1000px) {
+    .listview-header,
+    .listview-row {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        font-size: 14px;
+    }
+
+    .listview-small-header,
+    .listview-row-small {
+        grid-template-columns: 2fr 1fr 1fr;
+        font-size: 14px;
+    }
+
+    #studentForm {
+        grid-template-columns: 1fr;
+    }
+
+    #addStudentBtn {
+        grid-column: span 1;
+    }
+}
