@@ -8,8 +8,8 @@ This system takes student information as inputs and stores them in a table to re
 
 
 
-Total Development Time:15 hours
-System type: ASP.NET Core Web API
+Total Development Time:15 hours  |  
+System type: ASP.NET Core Web API  |  
 Screenshots and Table Posted
 
 
