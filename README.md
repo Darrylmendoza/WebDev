@@ -8,9 +8,9 @@ This system takes student information as inputs and stores them in a table to re
 
 
 
-Total Development Time:15 hours  |  
-System type: ASP.NET Core Web API  |  
-Screenshots and Table Posted
+*Total Development Time:15 hours        
+System type: ASP.NET Core Web API     
+Screenshots and Table Posted*          
 
 
 
@@ -20,7 +20,7 @@ Screenshots and Table Posted
 
 
 Challenges:
-Needing to change the table, having one table initially but had to make it three thus also having to alter almost the entire code
+>Needing to change the table, having one table initially but had to make it three thus also having to alter almost the entire code
 
 
-Controller logic
+>Controller logic
